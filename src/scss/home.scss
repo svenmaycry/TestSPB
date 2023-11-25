@@ -2,8 +2,7 @@
 
 .get-it {
    position: relative;
-   background: url('@img/backgroung_blue.png') 0 0 no-repeat;
-   background-size: contain;
+   background: url('@img/backgroung_blue.png') 0 0 / cover no-repeat;
    @include adaptiveValue("height", 900, 150);
    z-index: 3;
    @include adaptiveValue("margin-top", -130, -20);
@@ -219,8 +218,7 @@
 //====================================================================================================
 
 .choose {
-   background: url('@img/backgroung_blue_2.png') 0 0 no-repeat;
-   background-size: cover;
+   background: url('@img/backgroung_blue_2.png') 0 0 / cover no-repeat;
    color: #fff8f6;
    @include adaptiveValue("height", 1400, 550);
 @include adaptiveValue("margin-bottom", 100, -10);
@@ -374,8 +372,7 @@
 //====================================================================================================
 
 .video {
-   background: url('@img/ppl-back.png') 0 0 no-repeat;
-   background-size: cover;
+   background: url('@img/ppl-back.png') 0 0 / cover no-repeat;
    @include adaptiveValue("height", 1200, 320);
    @include adaptiveValue("margin-bottom", 140, 20);
 
@@ -587,8 +584,7 @@
 //====================================================================================================
 
 .app {
-   background: url('@img/background_blue_3.png') 0 0 no-repeat;
-   background-size: cover;
+   background: url('@img/background_blue_3.png') 0 0 / cover no-repeat;
    @include adaptiveValue("height", 1200, 350);
    @include adaptiveValue("margin-bottom", 46, 20);
    color: #ffffff;

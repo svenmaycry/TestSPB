@@ -1,8 +1,7 @@
 //====================================================================================================
 .header {
    color: white;
-   background: url('@img/background_stars.png') 0 0 no-repeat;
-   background-size: cover;
+   background: url('@img/background_stars.png') 0 0 / cover no-repeat;
 }
 .top-content-header {
    display: flex;
