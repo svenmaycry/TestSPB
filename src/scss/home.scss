@@ -607,7 +607,7 @@
    display: flex;
    justify-content:center;
    @include adaptiveValue("gap", 150, 10);
-   @include adaptiveValue("margi-left", -170, 0);
+   @include adaptiveValue("margin-left", -170, 0);
 
    &__form {
       display: flex;
