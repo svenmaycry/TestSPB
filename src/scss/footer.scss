@@ -1,0 +1,25 @@
+//====================================================================================================
+.footer {
+
+   &__logo {
+      text-align: center;
+      @include adaptiveValue("margin-bottom", 48, 20);
+   }
+
+   &__icons {
+      display: flex;
+      justify-content:center;
+      @include adaptiveValue("gap", 65, 20);
+      @include adaptiveValue("margin-bottom", 56, 20);
+   }
+
+   &__copy {
+      @include adaptiveValue("margin-bottom", 41, 20);
+      @include adaptiveValue("font-size", 15, 10);
+      @include adaptiveValue("line-height", 30, 15);
+      text-align: center;
+      color: #2c2c2c;
+   }
+}
+//
+//====================================================================================================

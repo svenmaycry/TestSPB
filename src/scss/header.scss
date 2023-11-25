@@ -1,0 +1,199 @@
+//====================================================================================================
+.header {
+   color: white;
+   background: url('@img/background_stars.png') 0 0 no-repeat;
+   background-size: cover;
+}
+.top-content-header {
+   display: flex;
+   justify-content:space-between;
+   gap: 40px;
+   @include adaptiveValue("margin-top", 39, 10);
+   @include adaptiveValue("margin-bottom ", 79, 20);
+   @include adaptiveValue("padding-right", 228, 10);
+   @include adaptiveValue("padding-left", 228, 10);
+   @include adaptiveValue("padding-left", 213, 10);
+
+}
+.menu {
+
+   &__icon {
+      margin: 0px 0px 20px 0px;
+   }
+
+   &__list {
+      display: flex;
+      justify-content:space-between;
+      gap: 35px;
+      @include adaptiveValue("gap", 35, 10);
+		@media (max-width:$mobile){
+			display: none;
+			.menu-open & {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+      .menu-open & {
+         border: 1px solid #fff;
+         padding: 10px;
+         border-radius: 10px;
+         z-index: 4;
+         overflow: hidden;
+      }
+   }
+
+   &__item {
+      text-transform: uppercase;
+      font-size: 15px;
+      @media (max-width:$mobile){
+         .menu-open & {
+            font-size: 24px;
+            margin: 0px 0px 5px 0px;
+            @include adaptiveValue("font-size", 24, 10);
+         }  
+      }
+   }
+
+   &__link {
+      transition: all 0.3s ease 0s;
+		@media (any-hover: hover){
+         &:hover{
+            color: rgb(224, 146, 28);
+         }
+      }
+   }
+}
+.icon-menu {
+   justify-content: flex-end;
+
+}
+.main-content-header {
+   &__body {
+      display: flex;
+      @include adaptiveValue("gap", 113, 10);
+      justify-content:center;
+
+   }
+
+}
+.header-item {
+   @include adaptiveValue("margin-top", 208, 10);
+
+   &__title {
+      @include adaptiveValue("width", 420, 200);
+      @include adaptiveValue("font-size", 47, 16);
+      line-height: 1.2;
+      text-align: center;
+      font-weight: 300;
+      @include adaptiveValue("margin-bottom", 56, 5);
+      span {
+         font-weight:900;
+      }
+   }
+
+   &__text {
+      @include adaptiveValue("width", 490, 100);
+      @include adaptiveValue("margin-bottom", 76, 30);
+      @include adaptiveValue("font-size", 18, 10);
+      @include adaptiveValue("line-height", 30, 10);
+      @include adaptiveValue("margin-left", -35, -20);
+      letter-spacing: 0.05em;
+      text-indent: 8px;
+   }
+
+   &__btn {
+      @include adaptiveValue("width", 237, 100);
+      @include adaptiveValue("height", 55, 30);
+      border: 1px solid #fff;
+      margin: 0 auto;
+      transition: all 0.3s ease 0s;
+      button {
+         width: 100%;
+         height: 100%;
+         line-height: 1.2;
+         font-weight: 300;
+         transition: all 0.3s ease 0s;
+         @media (any-hover: hover){
+            &:hover{
+                color: rgb(224, 146, 28);
+            }
+         }
+      }
+   }
+
+}
+.phones-header {
+   position: relative;
+   @include adaptiveValue("top", 70, 10);
+   left: 0;
+
+
+   &__1 {
+      position: relative;
+      z-index: 1;
+      img {
+         @include adaptiveValue("width", 291, 50);
+         @include adaptiveValue("height", 757, 200);
+      }
+
+   }
+
+   &__2 {
+      position: absolute;
+      top: 33px;
+      @include adaptiveValue("left", 100, 10);
+      img {
+         @include adaptiveValue("width", 291, 50);
+         @include adaptiveValue("height", 757, 200);
+      }
+   }
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #fff;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
